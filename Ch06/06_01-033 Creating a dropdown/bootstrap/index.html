@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <section class="col-xs-12">
+
+<h1>Our Mission</h1>
+
+<p>Wisdom Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis and treatment of companion animals including dogs, cats, birds, reptiles, rodents, and fish. We apply the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest treatments and cures.
+</p>
+
+<p>We strive to be your pet's medical experts from youth through the senior years. We build preventative health care plans for each and every one of our patients, based on breed, age, and sex, so that your pet receives the most appropriate care at crucial milestones. We want to give your pet a long and healthy life.
+</p>
+
+<div class="dropdown">
+<!-- data attr. is a special html class that allows you to enter your own data into any particular element. js file reads this data-toggle=dropdown and understands that this is a dropdown menu -->
+<!-- span with a class of caret added so that user would understand it is a drop down list -->
+<!-- id attr added so that we link it to our dropdown using an aria-labelledby attr in our ul so that the screen-reader reads the ul
+aria-haspopup lets the screen reader know this element has a popup 
+aria-expanded lets the screen reader know this has an expandable and collapsable region -->
+  <button type="button" data-toggle="dropdown" id="pettype" 
+    aria-haspopup="true" aria-expanded="true" class="btn btn-info dropdown-toggle">
+    Pet Type <span class="caret"></span>
+  </button>
+
+  <ul class="dropdown-menu" aria-labelledby="pettype">
+    <li class="dropdown-header">Common</li> <!-- header added -->
+    <li><a href="#">Cat</a></li>
+    <li><a href="#">Dog</a></li>
+    <li><a href="#">Fish</a></li>
+    <li class="disabled"><a href="#">Birds</a></li>
+    <li role="seperator" class="divider"></li> <!-- seperator added -->
+    <li class="dropdown-header">Exotic</li> 
+    <li><a href="#">Amphibian</a></li>
+    <li><a href="#">Reptile</a></li>
+    <li><a href="#">Other</a></li>
+  </ul>
+</div>
+
+<!-- ***combining two buttons*** -->
+<div class="dropdown">
+<div class="btn-group"> <!-- button group created, that allows us to combine buttons -->
+  <button type="button" class="btn btn-info">Search Pet Info</button> <!-- normal button -->
+  <button type="button" data-toggle="dropdown" id="pettype" 
+    aria-haspopup="true" aria-expanded="false" class="btn btn-info dropdown-toggle">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span> <!-- disabled gets what this caret is used for -->
+  </button>
+
+<ul class="dropdown-menu" aria-labelledby="pettype">
+  <li class="dropdown-header">Common</li> <!-- header added -->
+  <li><a href="#">Cat</a></li>
+  <li><a href="#">Dog</a></li>
+  <li><a href="#">Fish</a></li>
+  <li class="disabled"><a href="#">Birds</a></li>
+  <li role="seperator" class="divider"></li> <!-- seperator added -->
+  <li class="dropdown-header">Exotic</li> 
+  <li><a href="#">Amphibian</a></li>
+  <li><a href="#">Reptile</a></li>
+  <li><a href="#">Other</a></li>
+</ul>
+</div>
+</div>
+
+    </section>
+  </div><!-- row -->   
+</div><!-- content container -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

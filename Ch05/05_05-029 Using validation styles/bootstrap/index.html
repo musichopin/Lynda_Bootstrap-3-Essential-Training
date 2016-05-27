@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+<!-- with bootstrap we can add few classes that will show the validation state -->
+
+<div class="container">
+  <div class="row">
+    <section class="col-xs-12">
+
+<form>
+<!-- we can add error/warning/success class values
+by adding control-label attribute label also gets same color -->
+<!-- with "has-feedback" and "glyphicon glyphicon-ok form-control-feedback" classes
+we add feedback (there are many other items to add in glyphicon library)
+aria-hidden = true hides the icon in screen-reader devices
+and sr-only class makes the check-box equilavelant of check-box only available for sr readers
+aria-describedby and id attribute names must match each other -->
+  <div class="form-group has-success has-feedback">
+    <label class="control-label" for="inputName">Name</label>
+    <input class="form-control" type="text" id="inputName" placeholder="Name" aria-describedby="nameStatus">
+    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+    <span id="nameStatus" class="sr-only">(success)</span>
+  </div>
+
+</form>
+
+    </section>
+  </div><!-- row -->   
+</div><!-- content container -->
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

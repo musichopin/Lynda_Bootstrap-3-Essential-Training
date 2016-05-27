@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+<!-- input groups pack lots of functionality into a small space -->
+<div class="container">
+  <div class="row">
+    <section class="col-xs-12">
+
+<form>
+
+    <!-- ***Amount of Money*** -->
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input class="form-control" type="text" id="inputDollars" placeholder="Amount in dollars">
+        <span class="input-group-addon">.00</span>
+      </div>
+    </div>
+
+    <!-- former style:
+    <div class="form-group">
+      <label for="inputDollars">Price</label>
+      <input class="form-control" type="text" id="inputDollars" placeholder="$dollars">
+    </div> -->
+    
+    <!-- ***Checkbox*** -->
+    <!-- aria-label lets the disabled know what's going on -->
+     <div class="form-group"> <!-- adds spacing -->
+      <div class="input-group"> <!-- provides alignment -->
+        <span class="input-group-addon"> <!-- provides alignment and visual affects -->
+          <input type="checkbox" checked aria-label="customCheckbox">
+        </span>
+        <input class="form-control" type="text" id="input" placeholder="Write your own option">
+      </div>
+    </div>
+    
+    <!-- *** Concise Search-box: recommended *** -->
+    <!-- it is important to say "input-group-btn" -->
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Terms">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type=button>Search</button>
+        </span>
+      </div>
+    </div>
+
+</form>
+
+    </section>
+  </div><!-- row -->   
+</div><!-- content container -->
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

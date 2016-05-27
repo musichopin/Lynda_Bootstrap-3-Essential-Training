@@ -1,0 +1,7 @@
+/*viewport size extra small olduğu zaman*/
+@media (max-width: 767px) {
+	.img-responsive {
+		max-width: 50%; /*imgs will not get too big*/
+		min-width: 300px; /*imgs will not get too small*/
+	}
+}
