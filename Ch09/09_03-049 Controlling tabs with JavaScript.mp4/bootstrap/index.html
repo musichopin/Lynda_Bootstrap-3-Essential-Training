@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +37,38 @@
   <div class="row">
     <section class="col-sm-12">
 
-<h2>Preparing for a visit</h2>
+<h1>Services</h1>
 
-<p>Your pet will get the most out of his or her visit to Wisdom, if you’re able to describe your observations of him or her over the last several days prior to your visit. This includes paying close attention to your pet’s eating habits, bowl-movement frequency, mood, activity level, sleeping habits, or any unusual behaviors such as limping or excessive scratching. Even the slightest change in a pet’s behavior can indicate the start of a health problem.</p>
+<!-- nav-tabs or nav-pills -->
+<!-- data attr is sth that the js processor in js needs in order to understand what to do with data-xyz info
+data-toggle: we want to toggle the tab element that we are creating with this ancor tag -->
+<!-- hrefs belong to ids -->
+<ul class="nav nav-tabs" role="tablist"> 
+  <li role="presentation" class="active"> <!-- active tab -->
+    <a href="#exoticpets" role="tab" data-toggle="tab">Exotic Pets</a>
+  </li>  
+  <li role="presentation">
+    <a href="#grooming" role="tab" data-toggle="tab">Grooming</a>
+  </li>  
+  <li role="presentation">
+    <a href="#generalhealth" role="tab" data-toggle="tab">General Health</a>
+  </li>
+</ul>
 
-<h3>Vaccination Policy</h3>
-<p>Dogs and cats are susceptible to a variety of illnesses that can be completely prevented by following the appropriate vaccination schedule. At Wisdom, we approach vaccinations on a patient by patient basis, depending on the health and age of a dog, while also taking into account the vaccination schedules published by leading veterinary medical schools.</p>
+<div class="tab-content">
+  <div class="tab-pane active" role="tabpanel" id="exoticpets"> <!-- active content -->
+    <h3>Exotic Pets</h3>
+    <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
+  </div>  
+  <div class="tab-pane" role="tabpanel" id="grooming">
+    <h3>Grooming</h3>
+    <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
+  </div>  
+  <div class="tab-pane" role="tabpanel" id="generalhealth">
+    <h3>General Health</h3>
+    <p>Wellness and senior exams, ultrasound, x-ray, and dental cleanings are just a few of our general health services.</p>
+  </div>
+</div>
 
     </section>
   </div><!-- row -->   

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#featured">Wisdom <span class="subhead">Pet Medicine</span></a>
+      </div><!-- navbar-header -->
+      <div class="collapse navbar-collapse" id="collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#featured">Home</a></li>
+          <li class="active"><a href="#mission">Mission</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#staff">Staff</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div><!-- collapse navbar-collapse -->
+    </div><!-- container -->
+  </nav>
+
+<div class="content container">
+  <div class="row">
+    <section class="col-sm-12">
+
+<h1>Services</h1>
+
+<!-- ***a simple button that toggles a section of the page: collapsible content*** -->
+<!-- #1 -->
+<!-- role="button" lets the screen reader know what the functionality of this element is -->
+<!-- data toggle is info (collapse command is passed) that we wanna pass along the script that is gonna handle this functionality -->
+<!-- aria-expanded:false area is not gonna be shown at the begining by default -->
+
+<button data-target="#exoticpets" role="button" data-toggle="collapse" class="btn btn-primary" aria-expanded="false" aria-controls="exoticpets">Exotic Pets</button>
+<div class="collapse" id="exoticpets">
+  <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
+</div>
+
+<br/><br/>
+
+<!-- #2 -->
+<a href="#exoticpet" role="button" data-toggle="collapse" class="btn btn-primary" aria-expanded="false" aria-controls="exoticpet">Exotic Pets</a>
+<div class="collapse" id="exoticpet">
+  <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
+</div>
+
+<br/><br/>
+
+<!-- ***Accordion*** -->
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-success">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a href="#exoticpetss" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="exoticpetss">Exotic Pets</a> <!-- 
+        (similar above) -->
+      </h4>
+    </div>
+    
+    <!-- with in attr panel shows up by default at the beginning -->
+    <!-- with "#accordion" opening one panel closes the open one -->
+    <div class="panel-collapse collapse in" id="exoticpetss" role="tabpanel" arialabelledby="headingOne">
+      <div class="panel-body">
+        <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
+      </div> <!-- panel-body (similar above) -->
+    </div>
+  </div> 
+
+  <div class="panel panel-primary">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class="collapsed" href="#grooming" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="grooming">Grooming</a>
+      </h4>
+    </div>
+
+    <div class="panel-collapse collapse" id="grooming" role="tabpanel" arialabelledby="headingOne">
+      <div class="panel-body">
+        <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
+      </div> 
+    </div>
+  </div>
+
+  <div class="panel panel-warning">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class="collapsed" href="#generalhealth" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="generalhealth">General Health</a>
+      </h4>
+    </div>
+
+    <div class="panel-collapse collapse" id="generalhealth" role="tabpanel" arialabelledby="headingOne">
+      <div class="panel-body">
+        <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
+      </div>
+    </div>
+  </div>
+  
+    </section>
+  </div><!-- row -->   
+</div><!-- content container -->
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

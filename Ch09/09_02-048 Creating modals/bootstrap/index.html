@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#featured">Wisdom <span class="subhead">Pet Medicine</span></a>
+      </div><!-- navbar-header -->
+      <div class="collapse navbar-collapse" id="collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#featured">Home</a></li>
+          <li class="active"><a href="#mission">Mission</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#staff">Staff</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div><!-- collapse navbar-collapse -->
+    </div><!-- container -->
+  </nav>
+
+<div class="content container">
+  <div class="row">
+    <section class="col-sm-12">
+
+<h2>Preparing for a visit</h2>
+
+<p>Your pet will get the most out of his or her visit to Wisdom, if you’re able to describe your observations of him or her over the last several days prior to your visit. This includes paying close attention to your pet’s eating habits, bowl-movement frequency, mood, activity level, sleeping habits, or any unusual behaviors such as limping or excessive scratching. Even the slightest change in a pet’s behavior can indicate the start of a health problem.</p>
+<!-- modals are common design patterns that lets you show content when the user pushes a button or an html element. modals are useful for hiding info until the user needs it -->
+
+<!-- data-toggle: lets the js know that the action we wanna perform with this particular button is gonna be to activate a model -->
+<!-- data-target identifies which model we want to turn on -->
+<!-- tabindex="-1" indicates that an element is not tabbable (for disabled and sr) -->
+<!-- aria-labelledby attribute matches the id inside the modal-header class. it indicates that the label of the modal is what we are using in h3 as the title-->
+<!-- fade attr adds animation -->
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#policy">Vaccination Policy</button>
+
+<div class="modal fade" id="policy" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog modal-lg" role="document"> <!-- modal-sm, modal-lg, default -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- adds close button, data-dismiss="modal": close the modal, aria-label: label that sr gets, span: visual symbol, aria-hidden="true": hides for sr -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" id="modalLabel">Vaccination Policy</h3>          
+      </div> <!-- modal-header -->
+      <div class="modal-body">
+<p>Dogs and cats are susceptible to a variety of illnesses that can be completely prevented by following the appropriate vaccination schedule. At Wisdom, we approach vaccinations on a patient by patient basis, depending on the health and age of a dog, while also taking into account the vaccination schedules published by leading veterinary medical schools.</p>
+      </div><!-- modal-body -->
+      <div class="modal-footer"> <!-- footer generally holds the buttons (we need to include our own js to handle) -->
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          Close
+        </button>
+      </div> <!-- modal-footer -->
+    </div> <!-- modal-content --> <!-- 3 inner divs above are used for styling -->
+  </div> <!-- modal-dialog -->
+</div> <!-- modal -->
+
+    </section>
+  </div><!-- row -->   
+</div><!-- content container -->
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

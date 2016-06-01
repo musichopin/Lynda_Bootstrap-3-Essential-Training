@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#featured">Wisdom <span class="subhead">Pet Medicine</span></a>
+      </div><!-- navbar-header -->
+      <div class="collapse navbar-collapse" id="collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#featured">Home</a></li>
+          <li class="active"><a href="#mission">Mission</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#staff">Staff</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div><!-- collapse navbar-collapse -->
+    </div><!-- container -->
+  </nav>
+
+<div class="content container">
+  <div class="row">
+    <section class="col-sm-12">
+<!-- bootstrap's most popular js related component is carousel -->
+<!-- carousel hides the images in order to show one of the images which we have to add a class of active -->
+
+<!-- ***#1: automatic*** -->
+<!-- with data-ride="carousel" images change in every few seconds -->
+<!-- the images change as slide after few seconds through "slide" attribute -->
+<div class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="images/carousel-lifestyle.jpg" alt="Lifestyle Photo">
+      <div class="carousel-caption"> <!-- adds caption (writing) on the img -->
+        <h3>Headline</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam officia molestias labore natus blanditiis magnam quas expedita, sit eaque in delectus earum provident, nisi dolore voluptas ipsum eos tenetur odio.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/carousel-mission.jpg" alt="Mission">
+    </div>
+    <div class="item">
+      <img src="images/carousel-vaccinations.jpg" alt="Vaccinations">
+    </div>
+  </div> <!-- carousel-inner -->
+</div> <!-- carousel -->
+
+<!-- ***#2: arrows*** -->
+<!-- we need to give the carousel an id to add navigation -->
+<!-- although we don't have data-ride="carousel" att. the images automatically change once we click an arrow -->
+<div class="carousel slide" id="featured">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="images/carousel-lifestyle.jpg" alt="Lifestyle Photo">
+    </div>
+    <div class="item">
+      <img src="images/carousel-mission.jpg" alt="Mission">
+    </div>
+    <div class="item">
+      <img src="images/carousel-vaccinations.jpg" alt="Vaccinations">
+    </div>
+  </div> <!-- carousel-inner -->
+  
+  <!-- href is an id that we place on a particular carousel -->
+  <!-- because this is a link we use ancor tag instead of actual button. and whenever we 
+  want a link to behave like a button we use the role="button" so the sr would know what to do with this items -->
+  <!-- data-slide attr refers to the js method used to control the movement of the slide -->
+  <a class="left carousel-control" href="#featured" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+
+  <a class="right carousel-control" href="#featured" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div> <!-- carousel -->
+
+<!-- ***#3: indicators (for lots of images)*** -->
+<div class="carousel slide" id="featured2" data-ride="carousel">
+
+<!-- data-slide-to matches the no of carousel that we want to go to. 
+photo(0) -> 1st photo -->
+<!-- active classes of dots and items should correspond to each other -->
+<!-- resimlerin boyutunun aynı olması resimleri değiştirirken contentin zıplamaması bakımından önem taşır -->
+<ol class="carousel-indicators">
+  <li data-target="#featured2" data-slide-to="0"></li>
+  <li data-target="#featured2" data-slide-to="1" class="active"></li>
+  <li data-target="#featured2" data-slide-to="2"></li>
+</ol>
+
+  <div class="carousel-inner">
+    <div class="item">
+      <img src="images/carousel-lifestyle.jpg" alt="Lifestyle Photo">
+    </div>
+    <div class="item active">
+      <img src="images/carousel-mission.jpg" alt="Mission">
+    </div>
+    <div class="item">
+      <img src="images/carousel-vaccinations.jpg" alt="Vaccinations">
+    </div>
+  </div> <!-- carousel-inner -->
+</div>
+
+<h2>Our Mission</h2>
+
+<p>Wisdom Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis and treatment of companion animals including dogs, cats, birds, reptiles, rodents, and fish. We apply the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest treatments and cures.</p>
+
+<p>We strive to be your pet's medical experts from youth through the senior years. We build preventative health care plans for each and every one of our patients, based on breed, age, and sex, so that your pet receives the most appropriate care at crucial milestones. We want to give your pet a long and healthy life.</p>
+
+    </section>
+  </div><!-- row -->   
+</div><!-- content container -->
+
+<!-- we removed the container class to make the image go full width. böyle bir durumda resmin genişliği az gelirse arttırılır. -->
+<!-- when we use carousels we must presize the images equally in photoshop -->
+<div class="row">
+  <section class="col-sm-12">
+    
+<!-- ***#4: both indicator and arrow*** -->
+<!-- we may disable the carousel for mobile devices with hidden-xs -->
+<!-- we may also use javascript for data-ride="carousel" attribute
+our script.js file must come last while linking to html (just like css) -->
+<div class="carousel slide hidden-xs" id="featured3">
+  <ol class="carousel-indicators">
+    <li data-target="#featured3" data-slide-to="0"></li>
+    <li data-target="#featured3" data-slide-to="1" class="active"></li>
+    <li data-target="#featured3" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item">
+      <img src="images/carousel-lifestyle.jpg" alt="Lifestyle Photo">
+    </div>
+    <div class="item active">
+      <img src="images/carousel-mission.jpg" alt="Mission">
+    </div>
+    <div class="item">
+      <img src="images/carousel-vaccinations.jpg" alt="Vaccinations">
+    </div>
+  </div> <!-- carousel-inner -->
+</div>
+
+<a class="left carousel-control" href="#featured3" role="button" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+
+<a class="right carousel-control" href="#featured3" role="button" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+    
+  </section>
+</div>
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
