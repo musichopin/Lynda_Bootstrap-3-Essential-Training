@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +9,27 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Bootstrap</title>
 </head>
-<body >
+<body data-spy="scroll" data-target=".navbar-default" data-offset="50">
+<!-- data-spy="scroll" provides highlighting of the nav button depending on the relevant location on the page 
+we target the navigation with data-target attr.
+data-offset provides when the highlighting occurs-->
 
+<!-- since the content of the page is long we want the nav to appear after the page is scrolled for a while -->
+<!-- data-spy="affix" makes the navbar fixed (but css modification required) -->
+<!-- data-offset-top="550" : amount of pixels in which the nav will start appearing while scrolling the bar. 600(total height)-50(navbar height)=550(when the text starts and when the navbar comes in)
+with "data-offset" attribute at a certain point close to the bottom of the page the navbar starts scrolling with the rest of the page causing it to disappear early. in order to prevent this data-offset-top attribute was used -->
 <header>
-  <nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-default" data-spy="affix" data-offset-top="550" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Wisdom <span class="subhead">Pet Medicine</span></a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#staff">Staff</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-        </ul>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
     </div><!-- container -->
   </nav>
 </header>
@@ -38,7 +46,7 @@
   </div>
 
   <div class="row" id="services">
-    <section class="page col-sm-12">
+    <section class="page col-sm-12"> <!-- margin kazandırır -->
       <h2>Services</h2>
       <div class="row">
         <section class="col-sm-6">
@@ -127,9 +135,6 @@
     </section>
   </div>
 
-
-    </section>
-  </div><!-- row -->   
 </div><!-- content container -->
 
 

@@ -4,5 +4,10 @@
 
 header {
   background: url('../images/headerimage.jpg') center center no-repeat;
-  height: 600px;
+  height: 600px; /*height matters for bg image*/
+}
+
+.navbar-default{
+	width:100%;
+	z-index: 100; /*value must be higher for the navbar to be top of content*/
 }
